@@ -9,7 +9,6 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    ajoutfilm.cpp \
     connection.cpp \
     film.cpp \
     main.cpp \
@@ -17,14 +16,12 @@ SOURCES += \
     maisondeproduction.cpp
 
 HEADERS += \
-    ajoutfilm.h \
     connection.h \
     film.h \
     mainwindow.h \
     maisondeproduction.h
 
 FORMS += \
-    ajoutfilm.ui \
     mainwindow.ui
 
 # Default rules for deployment.

@@ -1,4 +1,4 @@
-#ifndef AJOUTFILM_H
+/*#ifndef AJOUTFILM_H
 #define AJOUTFILM_H
 
 #include <QDialog>
@@ -18,8 +18,11 @@ public:
 private slots:
     void on_pushButton_clicked();
 
+    void on_lineEdit_10_cursorPositionChanged(int arg1, int arg2);
+
 private:
     Ui::ajoutfilm *ui;
 };
 
 #endif // AJOUTFILM_H
+*/

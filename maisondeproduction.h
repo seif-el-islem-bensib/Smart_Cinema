@@ -9,14 +9,15 @@ using namespace std;
 class Maisondeproduction
 {
 private:
-    QString ID_mdp,nom_mdp,directeur;
-    vector<QString> Tab_de_nom_acteur;
+    QString ID_mdp,nom_mdp,directeur1;
+
 
 
 public:
     Maisondeproduction();
-    Maisondeproduction(QString,QString,QString,vector<QString>);
+    Maisondeproduction(QString,QString,QString);
     QString rechercher_un_mdp(QString);
+    bool ajouter();
 
 };
 

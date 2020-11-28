@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>600</height>
+    <height>571</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,10 +20,10 @@
    <widget class="QTabWidget" name="Main">
     <property name="geometry">
      <rect>
-      <x>40</x>
+      <x>10</x>
       <y>30</y>
-      <width>741</width>
-      <height>451</height>
+      <width>771</width>
+      <height>501</height>
      </rect>
     </property>
     <property name="font">
@@ -42,190 +42,544 @@
      <attribute name="title">
       <string>Manipluaton_Film</string>
      </attribute>
-     <widget class="QPushButton" name="hkjhk">
+     <widget class="QTabWidget" name="tabWidget">
       <property name="geometry">
        <rect>
-        <x>80</x>
-        <y>40</y>
-        <width>181</width>
-        <height>31</height>
+        <x>-10</x>
+        <y>10</y>
+        <width>791</width>
+        <height>471</height>
        </rect>
       </property>
-      <property name="text">
-       <string>Ajouter un Film</string>
+      <property name="currentIndex">
+       <number>1</number>
       </property>
-     </widget>
-     <widget class="QPushButton" name="hkjhk_2">
-      <property name="geometry">
-       <rect>
-        <x>80</x>
-        <y>90</y>
-        <width>181</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Modifier les information d'un Film</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="hkjhk_3">
-      <property name="geometry">
-       <rect>
-        <x>80</x>
-        <y>140</y>
-        <width>181</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>afficher les information d'un Film</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="hkjhk_4">
-      <property name="geometry">
-       <rect>
-        <x>80</x>
-        <y>190</y>
-        <width>181</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Supprimer un Film</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="hkjhk_5">
-      <property name="geometry">
-       <rect>
-        <x>80</x>
-        <y>240</y>
-        <width>181</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Trier Les Film selon un ordre</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="hkjhk_6">
-      <property name="geometry">
-       <rect>
-        <x>80</x>
-        <y>290</y>
-        <width>181</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Rechercher un Film</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="hkjhk_7">
-      <property name="geometry">
-       <rect>
-        <x>80</x>
-        <y>340</y>
-        <width>181</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Compter le nombre de  Film </string>
-      </property>
-     </widget>
-     <widget class="QTableView" name="tableView">
-      <property name="geometry">
-       <rect>
-        <x>320</x>
-        <y>30</y>
-        <width>311</width>
-        <height>341</height>
-       </rect>
-      </property>
+      <widget class="QWidget" name="Ajouterunfilm">
+       <attribute name="title">
+        <string>Ajouter </string>
+       </attribute>
+       <widget class="QLabel" name="label_5">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>200</y>
+          <width>121</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>durée :</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_6">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>240</y>
+          <width>121</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>numero de la salle :</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="L5">
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>200</y>
+          <width>211</width>
+          <height>31</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="L3">
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>120</y>
+          <width>211</width>
+          <height>31</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_4">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>160</y>
+          <width>121</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Genre :</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="jouterfm">
+        <property name="geometry">
+         <rect>
+          <x>450</x>
+          <y>140</y>
+          <width>121</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Ajouter un Film</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>40</y>
+          <width>121</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>ID du Film :</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="L4">
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>160</y>
+          <width>211</width>
+          <height>31</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_2">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>80</y>
+          <width>121</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Nom du Film :</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_3">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>120</y>
+          <width>121</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>ID mdp :</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="L1">
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>40</y>
+          <width>211</width>
+          <height>31</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="L2">
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>80</y>
+          <width>211</width>
+          <height>31</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="L6">
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>240</y>
+          <width>211</width>
+          <height>31</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>Afficher</string>
+       </attribute>
+       <widget class="QLabel" name="label_16">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>140</y>
+          <width>47</width>
+          <height>13</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QTableView" name="filmtable">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>50</y>
+          <width>661</width>
+          <height>381</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Modifier</string>
+       </attribute>
+       <widget class="QLineEdit" name="modd">
+        <property name="geometry">
+         <rect>
+          <x>210</x>
+          <y>190</y>
+          <width>211</width>
+          <height>31</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_7">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>110</y>
+          <width>121</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Nouveau ID mdp :</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="modnds">
+        <property name="geometry">
+         <rect>
+          <x>210</x>
+          <y>230</y>
+          <width>211</width>
+          <height>31</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_8">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>70</y>
+          <width>121</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Nouveau Nom du Film :</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_9">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>230</y>
+          <width>161</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Nouveau numero de la salle :</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_10">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>30</y>
+          <width>121</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Donner l'id de film</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="modnom">
+        <property name="geometry">
+         <rect>
+          <x>210</x>
+          <y>70</y>
+          <width>211</width>
+          <height>31</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_11">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>190</y>
+          <width>121</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Nouveau durée :</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="modidmdp">
+        <property name="geometry">
+         <rect>
+          <x>210</x>
+          <y>110</y>
+          <width>211</width>
+          <height>31</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="modid">
+        <property name="geometry">
+         <rect>
+          <x>210</x>
+          <y>30</y>
+          <width>211</width>
+          <height>31</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="modg">
+        <property name="geometry">
+         <rect>
+          <x>210</x>
+          <y>150</y>
+          <width>211</width>
+          <height>31</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_12">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>150</y>
+          <width>121</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Nouveau Genre :</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="modifierfilm">
+        <property name="geometry">
+         <rect>
+          <x>510</x>
+          <y>120</y>
+          <width>121</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Modifier</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_3">
+       <attribute name="title">
+        <string>Supprimer</string>
+       </attribute>
+       <widget class="QLabel" name="label_17">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>90</y>
+          <width>181</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Donner l'ID de Film a supprimer :</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit">
+        <property name="geometry">
+         <rect>
+          <x>290</x>
+          <y>90</y>
+          <width>241</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_2">
+        <property name="geometry">
+         <rect>
+          <x>240</x>
+          <y>160</y>
+          <width>75</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Supprimer</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_4">
+       <attribute name="title">
+        <string>Compter les film</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="tab_5">
+       <attribute name="title">
+        <string>Trier les films selon un ordre</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="tab_6">
+       <attribute name="title">
+        <string>Afficherlesinformationd'un Film</string>
+       </attribute>
+      </widget>
      </widget>
     </widget>
     <widget class="QWidget" name="ma">
      <attribute name="title">
       <string>Manipluation_MaisonProduction</string>
      </attribute>
-     <widget class="QPushButton" name="hkjhk_8">
+     <widget class="QTabWidget" name="tabWidget_2">
       <property name="geometry">
        <rect>
-        <x>80</x>
-        <y>70</y>
-        <width>281</width>
-        <height>31</height>
+        <x>0</x>
+        <y>-1</y>
+        <width>781</width>
+        <height>311</height>
        </rect>
       </property>
-      <property name="text">
-       <string>Ajouter une maison de production </string>
+      <property name="currentIndex">
+       <number>1</number>
       </property>
-     </widget>
-     <widget class="QPushButton" name="hkjhk_9">
-      <property name="geometry">
-       <rect>
-        <x>80</x>
-        <y>120</y>
-        <width>281</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Modifier les information  d'une maison de production </string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="hkjhk_11">
-      <property name="geometry">
-       <rect>
-        <x>80</x>
-        <y>170</y>
-        <width>281</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Afficher les information  d'une maison de production </string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="hkjhk_12">
-      <property name="geometry">
-       <rect>
-        <x>80</x>
-        <y>220</y>
-        <width>281</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Supprimer  une maison de production </string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="hkjhk_13">
-      <property name="geometry">
-       <rect>
-        <x>80</x>
-        <y>270</y>
-        <width>281</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Rechercher une maison de production </string>
-      </property>
-     </widget>
-     <widget class="QTableView" name="tableView_2">
-      <property name="geometry">
-       <rect>
-        <x>410</x>
-        <y>20</y>
-        <width>251</width>
-        <height>321</height>
-       </rect>
-      </property>
+      <widget class="QWidget" name="tab_7">
+       <attribute name="title">
+        <string>Ajouter</string>
+       </attribute>
+       <widget class="QLabel" name="label_13">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>40</y>
+          <width>121</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>ID du Mdp :</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_14">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>120</y>
+          <width>121</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Nom directeur  mdp :</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="DIR">
+        <property name="geometry">
+         <rect>
+          <x>220</x>
+          <y>120</y>
+          <width>151</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="ajout_maisondeproduction">
+        <property name="geometry">
+         <rect>
+          <x>440</x>
+          <y>80</y>
+          <width>121</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Ajouter une MDP</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="NOM">
+        <property name="geometry">
+         <rect>
+          <x>220</x>
+          <y>80</y>
+          <width>151</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_15">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>80</y>
+          <width>121</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Nom du Mdp :</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="ID">
+        <property name="geometry">
+         <rect>
+          <x>220</x>
+          <y>40</y>
+          <width>151</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_9">
+       <attribute name="title">
+        <string>Afficher</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="tab_8">
+       <attribute name="title">
+        <string>Modifier</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="tab_10">
+       <attribute name="title">
+        <string>Supprimer</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="tab_11">
+       <attribute name="title">
+        <string>Rechercher une maison de production </string>
+       </attribute>
+      </widget>
      </widget>
     </widget>
    </widget>
   </widget>
+  <widget class="QStatusBar" name="statusbar"/>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
@@ -235,8 +589,13 @@
      <height>21</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuSmartCinema">
+    <property name="title">
+     <string>SmartCinema</string>
+    </property>
+   </widget>
+   <addaction name="menuSmartCinema"/>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>

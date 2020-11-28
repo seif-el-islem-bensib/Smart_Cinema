@@ -1,7 +1,8 @@
-#include "ajoutfilm.h"
+/*#include "ajoutfilm.h"
 #include "film.h"
-#include "ui_ajoutfilm.h"
 #include "QMessageBox"
+#include "ui_ajoutfilm.h"
+
 
 
 ajoutfilm::ajoutfilm(QWidget *parent) :
@@ -16,22 +17,22 @@ ajoutfilm::~ajoutfilm()
     delete ui;
 }
 
-void ajoutfilm::on_pushButton_clicked()
+/*void ajoutfilm::on_pushButton_clicked()
 {
 
-    QString idf= ui->lineEdit_10->text();
-    QString nf= ui->lineEdit_11->text();
-    QString idmdp= ui->lineEdit_9->text();
-    QString g= ui->lineEdit_8->text();
-     int d = ui->lineEdit_7->text().toInt();
-     int ns = ui->lineEdit_6->text().toInt();
-  Film f(idf,nf,idmdp,g,d,ns);
+    QString IDfilm= ui->lineEdit_10->text();
+    QString Nomfilm= ui->lineEdit_11->text();
+    QString IDmdp= ui->lineEdit_9->text();
+    QString Genre= ui->lineEdit_8->text();
+     int duree = ui->lineEdit_7->text().toInt();
+     int numsalle = ui->lineEdit_6->text().toInt();
+  Film f(IDfilm,Nomfilm,IDmdp,Genre,duree,numsalle);
   bool test=f.ajouter();
   if(test)
 {
 
       //ui->Film->setModel(tmpefilm.afficher());//refresh
-QMessageBox::information(nullptr, QObject::tr("Ajouter d'un Film"),
+QMessageBox::information(nullptr, QObject::tr("Ajouter un Film"),
                   QObject::tr("Film ajoutee.\n"
                               "Click Cancel to exit."), QMessageBox::Cancel);
 
@@ -43,5 +44,8 @@ QMessageBox::information(nullptr, QObject::tr("Ajouter d'un Film"),
 
 
 }
+*/
+
+
 
 
