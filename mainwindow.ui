@@ -45,14 +45,14 @@
      <widget class="QTabWidget" name="tabWidget">
       <property name="geometry">
        <rect>
-        <x>-10</x>
-        <y>10</y>
+        <x>0</x>
+        <y>0</y>
         <width>791</width>
         <height>471</height>
        </rect>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>5</number>
       </property>
       <widget class="QWidget" name="Ajouterunfilm">
        <attribute name="title">
@@ -411,7 +411,7 @@
          <string>Donner l'ID de Film a supprimer :</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit">
+       <widget class="QLineEdit" name="filmsup">
         <property name="geometry">
          <rect>
           <x>290</x>
@@ -421,7 +421,7 @@
          </rect>
         </property>
        </widget>
-       <widget class="QPushButton" name="pushButton_2">
+       <widget class="QPushButton" name="suppfilm">
         <property name="geometry">
          <rect>
           <x>240</x>
@@ -439,16 +439,229 @@
        <attribute name="title">
         <string>Compter les film</string>
        </attribute>
+       <widget class="QLabel" name="label_22">
+        <property name="geometry">
+         <rect>
+          <x>160</x>
+          <y>300</y>
+          <width>141</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>300</y>
+          <width>75</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Compter</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="comptegenre">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>120</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_23">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>120</y>
+          <width>81</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Genre</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="compteordrmin">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>160</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_24">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>160</y>
+          <width>81</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>durree</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="compteordremax">
+        <property name="geometry">
+         <rect>
+          <x>260</x>
+          <y>160</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_25">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>200</y>
+          <width>131</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>masion de production</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="comptermdp">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>200</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
       </widget>
       <widget class="QWidget" name="tab_5">
        <attribute name="title">
         <string>Trier les films selon un ordre</string>
        </attribute>
+       <widget class="QTableView" name="filmtable_2">
+        <property name="geometry">
+         <rect>
+          <x>280</x>
+          <y>20</y>
+          <width>471</width>
+          <height>401</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="Trier">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>190</y>
+          <width>75</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Trier</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioButton">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>90</y>
+          <width>111</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Ordre Croissant</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioButton_2">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>120</y>
+          <width>141</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Ordre Décroissant</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioButton_3">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>150</y>
+          <width>151</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Selon Durée Croissant</string>
+        </property>
+       </widget>
       </widget>
       <widget class="QWidget" name="tab_6">
        <attribute name="title">
         <string>Afficherlesinformationd'un Film</string>
        </attribute>
+       <widget class="QTableView" name="filmtable_4">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>240</y>
+          <width>711</width>
+          <height>101</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_26">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>70</y>
+          <width>71</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Donner l'ID :</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="ID1">
+        <property name="geometry">
+         <rect>
+          <x>180</x>
+          <y>70</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="afficher1">
+        <property name="geometry">
+         <rect>
+          <x>330</x>
+          <y>70</y>
+          <width>75</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Afficher</string>
+        </property>
+       </widget>
       </widget>
      </widget>
     </widget>
@@ -466,7 +679,7 @@
        </rect>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>3</number>
       </property>
       <widget class="QWidget" name="tab_7">
        <attribute name="title">
@@ -475,7 +688,7 @@
        <widget class="QLabel" name="label_13">
         <property name="geometry">
          <rect>
-          <x>40</x>
+          <x>30</x>
           <y>40</y>
           <width>121</width>
           <height>31</height>
@@ -488,24 +701,14 @@
        <widget class="QLabel" name="label_14">
         <property name="geometry">
          <rect>
-          <x>40</x>
-          <y>120</y>
+          <x>30</x>
+          <y>70</y>
           <width>121</width>
           <height>31</height>
          </rect>
         </property>
         <property name="text">
          <string>Nom directeur  mdp :</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="DIR">
-        <property name="geometry">
-         <rect>
-          <x>220</x>
-          <y>120</y>
-          <width>151</width>
-          <height>20</height>
-         </rect>
         </property>
        </widget>
        <widget class="QPushButton" name="ajout_maisondeproduction">
@@ -521,21 +724,11 @@
          <string>Ajouter une MDP</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="NOM">
-        <property name="geometry">
-         <rect>
-          <x>220</x>
-          <y>80</y>
-          <width>151</width>
-          <height>20</height>
-         </rect>
-        </property>
-       </widget>
        <widget class="QLabel" name="label_15">
         <property name="geometry">
          <rect>
-          <x>40</x>
-          <y>80</y>
+          <x>30</x>
+          <y>100</y>
           <width>121</width>
           <height>31</height>
          </rect>
@@ -544,12 +737,32 @@
          <string>Nom du Mdp :</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="ID">
+       <widget class="QLineEdit" name="IDM">
         <property name="geometry">
          <rect>
-          <x>220</x>
+          <x>190</x>
           <y>40</y>
-          <width>151</width>
+          <width>141</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="NOMM">
+        <property name="geometry">
+         <rect>
+          <x>190</x>
+          <y>100</y>
+          <width>141</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="DIRM">
+        <property name="geometry">
+         <rect>
+          <x>190</x>
+          <y>70</y>
+          <width>141</width>
           <height>20</height>
          </rect>
         </property>
@@ -559,21 +772,198 @@
        <attribute name="title">
         <string>Afficher</string>
        </attribute>
+       <widget class="QTableView" name="maisontable">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>1</y>
+          <width>751</width>
+          <height>281</height>
+         </rect>
+        </property>
+       </widget>
       </widget>
       <widget class="QWidget" name="tab_8">
        <attribute name="title">
         <string>Modifier</string>
        </attribute>
+       <widget class="QLineEdit" name="DIRM_2">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>80</y>
+          <width>141</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_19">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>80</y>
+          <width>121</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Nom directeur  mdp :</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="IDM_2">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>50</y>
+          <width>141</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="NOMM_2">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>110</y>
+          <width>141</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_20">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>110</y>
+          <width>121</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Nom du Mdp :</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_21">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>50</y>
+          <width>121</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>ID du Mdp :</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="Mod_maisondeproduction">
+        <property name="geometry">
+         <rect>
+          <x>450</x>
+          <y>90</y>
+          <width>121</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Modifier</string>
+        </property>
+       </widget>
       </widget>
       <widget class="QWidget" name="tab_10">
        <attribute name="title">
         <string>Supprimer</string>
        </attribute>
+       <widget class="QLabel" name="label_18">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>80</y>
+          <width>181</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Donner l'ID de Film a supprimer :</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="deletemdp">
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>150</y>
+          <width>75</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Supprimer</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="delmaison">
+        <property name="geometry">
+         <rect>
+          <x>220</x>
+          <y>80</y>
+          <width>241</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
       </widget>
       <widget class="QWidget" name="tab_11">
        <attribute name="title">
         <string>Rechercher une maison de production </string>
        </attribute>
+       <widget class="QLineEdit" name="ID1_3">
+        <property name="geometry">
+         <rect>
+          <x>150</x>
+          <y>90</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="afficher1_3">
+        <property name="geometry">
+         <rect>
+          <x>300</x>
+          <y>90</y>
+          <width>75</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Afficher</string>
+        </property>
+       </widget>
+       <widget class="QTableView" name="filmtable_5">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>180</y>
+          <width>711</width>
+          <height>101</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_27">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>90</y>
+          <width>71</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Donner l'ID :</string>
+        </property>
+       </widget>
       </widget>
      </widget>
     </widget>

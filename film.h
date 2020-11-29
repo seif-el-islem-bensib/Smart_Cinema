@@ -10,11 +10,16 @@ public:
     Film();
     Film(QString,QString,QString,QString,int,int);
     bool ajouter();
+    bool supprimer(QString);
     QSqlQueryModel * afficher();
-    bool update();
-    QString rechercher_un_film(QString);
-    Film trier_les_film(char);
-    int compter_les_film();
+    bool update(QString , QString, QString, QString , int , int );
+    int compter(QString , int , int , QString );
+    QSqlQueryModel * afficher1(QString);
+    QSqlQueryModel * affichercr();
+    QSqlQueryModel * afficherdc();
+    QSqlQueryModel * afficherdu();
+
+
 
 private:
     QString IDfilm,Nomfilm,IDmdp,Genre;
