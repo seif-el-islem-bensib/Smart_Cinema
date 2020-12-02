@@ -39,6 +39,10 @@ private slots:
 
     void on_Trier_clicked();
 
+
+
+
+
 private:
     Ui::MainWindow *ui;
     Film tmpfilm;

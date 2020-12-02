@@ -29,8 +29,21 @@ MainWindow::MainWindow(QWidget *parent)
 
         }
     ui->setupUi(this);
+
+    ui->L5->setValidator(new QIntValidator(0, 9, this));
+    ui->L6->setValidator(new QIntValidator(0, 999, this));
+    ui->L4->setValidator(new QRegExpValidator(QRegExp("[a-z]{1}[a-z]{0,255}"),NULL));
+    ui->L1->setValidator(new QRegExpValidator(QRegExp("[a-z0-9]{1}[a-z0-9_-]{0,255}"),NULL));
+    ui->L2->setValidator(new QRegExpValidator(QRegExp("[a-z0-9]{1}[a-z0-9_-]{0,255}"),NULL));
+    ui->L3->setValidator(new QRegExpValidator(QRegExp("[a-z0-9]{1}[a-z0-9_-]{0,255}"),NULL));
+    ui->IDM->setValidator(new QRegExpValidator(QRegExp("[a-z0-9]{1}[a-z0-9_-]{0,255}"),NULL));
+    ui->DIRM->setValidator(new QRegExpValidator(QRegExp("[a-z]{1}[a-z]{0,255}"),NULL));
+
+    ui->NOMM->setValidator(new QRegExpValidator(QRegExp("[a-z]{1}[a-z]{0,255}"),NULL));
     ui->filmtable->setModel(tmpfilm.afficher());
     ui->maisontable->setModel(tmpmsn.afficher());
+
+
 
 }
 
@@ -46,10 +59,13 @@ void MainWindow::on_jouterfm_clicked()
     QString Nomfilm= ui->L2->text();
     QString IDmdp= ui->L3->text();
     QString Genre= ui->L4->text();
+
      int duree = ui->L5->text().toInt();
      int numsalle = ui->L6->text().toInt();
   Film f(IDfilm,Nomfilm,IDmdp,Genre,duree,numsalle);
+
   bool test=f.ajouter();
+  if(duree<0 && Genre.toInt()){test=false;}
   if(test)
 {
 
@@ -75,7 +91,9 @@ void MainWindow::on_ajout_maisondeproduction_clicked()
     QString direc= ui->DIRM->text();
 
   Maisondeproduction m(ID_mdp,nom_mdp, direc);
+
   bool test=m.ajouter();
+  if(!direc.toInt()){test=false;};
   if(test)
 {
 
@@ -86,7 +104,7 @@ QMessageBox::information(nullptr, QObject::tr("Ajouter une Maison de Production"
 }
   else
       QMessageBox::critical(nullptr, QObject::tr("Ajouter une Maison de Production"),
-                  QObject::tr("Operation Echoue"), QMessageBox::Cancel);
+                  QObject::tr("Operation Echoue verifier les champs saisie"), QMessageBox::Cancel);
 
 }
 
@@ -214,3 +232,5 @@ void MainWindow::on_Trier_clicked()
         ui->filmtable_2->setModel(tmpfilm.afficherdu());
     }
 }
+
+

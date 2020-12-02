@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>571</height>
+    <width>870</width>
+    <height>510</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -21,9 +21,9 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>30</y>
-      <width>771</width>
-      <height>501</height>
+      <y>10</y>
+      <width>801</width>
+      <height>461</height>
      </rect>
     </property>
     <property name="font">
@@ -33,7 +33,102 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true"/>
+     <string notr="true">QTabWidget::pane {
+    border: 1px solid black;
+    background: white;
+}
+
+QTabWidget::tab-bar:top {
+    top: 1px;
+}
+
+QTabWidget::tab-bar:bottom {
+    bottom: 1px;
+}
+
+QTabWidget::tab-bar:left {
+    right: 1px;
+}
+
+QTabWidget::tab-bar:right {
+    left: 1px;
+}
+
+QTabBar::tab {
+    border: 1px solid black;
+}
+
+QTabBar::tab:selected {
+    background: white;
+}
+
+QTabBar::tab:!selected {
+    background: silver;
+}
+
+QTabBar::tab:!selected:hover {
+    background: #999;
+}
+
+QTabBar::tab:top:!selected {
+    margin-top: 3px;
+}
+
+QTabBar::tab:bottom:!selected {
+    margin-bottom: 3px;
+}
+
+QTabBar::tab:top, QTabBar::tab:bottom {
+    min-width: 8ex;
+    margin-right: -1px;
+    padding: 5px 10px 5px 10px;
+}
+
+QTabBar::tab:top:selected {
+    border-bottom-color: none;
+}
+
+QTabBar::tab:bottom:selected {
+    border-top-color: none;
+}
+
+QTabBar::tab:top:last, QTabBar::tab:bottom:last,
+QTabBar::tab:top:only-one, QTabBar::tab:bottom:only-one {
+    margin-right: 0;
+}
+
+QTabBar::tab:left:!selected {
+    margin-right: 3px;
+}
+
+QTabBar::tab:right:!selected {
+    margin-left: 3px;
+}
+
+QTabBar::tab:left, QTabBar::tab:right {
+    min-height: 8ex;
+    margin-bottom: -1px;
+    padding: 10px 5px 10px 5px;
+}
+
+QTabBar::tab:left:selected {
+    border-left-color: none;
+}
+
+QTabBar::tab:right:selected {
+    border-right-color: none;
+}
+
+QTabBar::tab:left:last, QTabBar::tab:right:last,
+QTabBar::tab:left:only-one, QTabBar::tab:right:only-one {
+    margin-bottom: 0;
+}
+QTabWidget::pane {
+  border: 1px solid lightgray;
+  top:-1px; 
+  background:#34C184; 
+} 
+</string>
     </property>
     <property name="currentIndex">
      <number>0</number>
@@ -47,12 +142,110 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>791</width>
+        <width>801</width>
         <height>471</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">QTabWidget::pane {
+    border: 1px solid black;
+    background: white;
+}
+
+QTabWidget::tab-bar:top {
+    top: 1px;
+}
+
+QTabWidget::tab-bar:bottom {
+    bottom: 1px;
+}
+
+QTabWidget::tab-bar:left {
+    right: 1px;
+}
+
+QTabWidget::tab-bar:right {
+    left: 1px;
+}
+
+QTabBar::tab {
+    border: 1px solid black;
+}
+
+QTabBar::tab:selected {
+    background: white;
+}
+
+QTabBar::tab:!selected {
+    background: silver;
+}
+
+QTabBar::tab:!selected:hover {
+    background: #999;
+}
+
+QTabBar::tab:top:!selected {
+    margin-top: 3px;
+}
+
+QTabBar::tab:bottom:!selected {
+    margin-bottom: 3px;
+}
+
+QTabBar::tab:top, QTabBar::tab:bottom {
+    min-width: 8ex;
+    margin-right: -1px;
+    padding: 5px 10px 5px 10px;
+}
+
+QTabBar::tab:top:selected {
+    border-bottom-color: none;
+}
+
+QTabBar::tab:bottom:selected {
+    border-top-color: none;
+}
+
+QTabBar::tab:top:last, QTabBar::tab:bottom:last,
+QTabBar::tab:top:only-one, QTabBar::tab:bottom:only-one {
+    margin-right: 0;
+}
+
+QTabBar::tab:left:!selected {
+    margin-right: 3px;
+}
+
+QTabBar::tab:right:!selected {
+    margin-left: 3px;
+}
+
+QTabBar::tab:left, QTabBar::tab:right {
+    min-height: 8ex;
+    margin-bottom: -1px;
+    padding: 10px 5px 10px 5px;
+}
+
+QTabBar::tab:left:selected {
+    border-left-color: none;
+}
+
+QTabBar::tab:right:selected {
+    border-right-color: none;
+}
+
+QTabBar::tab:left:last, QTabBar::tab:right:last,
+QTabBar::tab:left:only-one, QTabBar::tab:right:only-one {
+    margin-bottom: 0;
+}
+QTabWidget::pane {
+  border: 1px solid lightgray;
+  top:-1px; 
+  background:#34C184; 
+} 
+</string>
+      </property>
       <property name="currentIndex">
-       <number>5</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="Ajouterunfilm">
        <attribute name="title">
@@ -68,7 +261,7 @@
          </rect>
         </property>
         <property name="text">
-         <string>durée :</string>
+         <string>durée (en heure):</string>
         </property>
        </widget>
        <widget class="QLabel" name="label_6">
@@ -120,8 +313,8 @@
        <widget class="QPushButton" name="jouterfm">
         <property name="geometry">
          <rect>
-          <x>450</x>
-          <y>140</y>
+          <x>440</x>
+          <y>150</y>
           <width>121</width>
           <height>31</height>
          </rect>
@@ -230,9 +423,9 @@
        <widget class="QTableView" name="filmtable">
         <property name="geometry">
          <rect>
-          <x>50</x>
-          <y>50</y>
-          <width>661</width>
+          <x>0</x>
+          <y>10</y>
+          <width>651</width>
           <height>381</height>
          </rect>
         </property>
@@ -383,8 +576,8 @@
        <widget class="QPushButton" name="modifierfilm">
         <property name="geometry">
          <rect>
-          <x>510</x>
-          <y>120</y>
+          <x>450</x>
+          <y>130</y>
           <width>121</width>
           <height>31</height>
          </rect>
@@ -424,9 +617,9 @@
        <widget class="QPushButton" name="suppfilm">
         <property name="geometry">
          <rect>
-          <x>240</x>
-          <y>160</y>
-          <width>75</width>
+          <x>590</x>
+          <y>90</y>
+          <width>84</width>
           <height>23</height>
          </rect>
         </property>
@@ -457,7 +650,7 @@
          <rect>
           <x>60</x>
           <y>300</y>
-          <width>75</width>
+          <width>84</width>
           <height>23</height>
          </rect>
         </property>
@@ -468,7 +661,7 @@
        <widget class="QLineEdit" name="comptegenre">
         <property name="geometry">
          <rect>
-          <x>130</x>
+          <x>160</x>
           <y>120</y>
           <width>113</width>
           <height>20</height>
@@ -491,7 +684,7 @@
        <widget class="QLineEdit" name="compteordrmin">
         <property name="geometry">
          <rect>
-          <x>130</x>
+          <x>160</x>
           <y>160</y>
           <width>113</width>
           <height>20</height>
@@ -514,7 +707,7 @@
        <widget class="QLineEdit" name="compteordremax">
         <property name="geometry">
          <rect>
-          <x>260</x>
+          <x>290</x>
           <y>160</y>
           <width>113</width>
           <height>20</height>
@@ -524,7 +717,7 @@
        <widget class="QLabel" name="label_25">
         <property name="geometry">
          <rect>
-          <x>0</x>
+          <x>30</x>
           <y>200</y>
           <width>131</width>
           <height>20</height>
@@ -537,7 +730,7 @@
        <widget class="QLineEdit" name="comptermdp">
         <property name="geometry">
          <rect>
-          <x>130</x>
+          <x>160</x>
           <y>200</y>
           <width>113</width>
           <height>20</height>
@@ -564,7 +757,7 @@
          <rect>
           <x>40</x>
           <y>190</y>
-          <width>75</width>
+          <width>84</width>
           <height>23</height>
          </rect>
         </property>
@@ -620,7 +813,7 @@
         <property name="geometry">
          <rect>
           <x>30</x>
-          <y>240</y>
+          <y>170</y>
           <width>711</width>
           <height>101</height>
          </rect>
@@ -654,7 +847,7 @@
          <rect>
           <x>330</x>
           <y>70</y>
-          <width>75</width>
+          <width>84</width>
           <height>23</height>
          </rect>
         </property>
@@ -673,13 +866,111 @@
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>-1</y>
+        <y>0</y>
         <width>781</width>
         <height>311</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">QTabWidget::pane {
+    border: 1px solid black;
+    background: white;
+}
+
+QTabWidget::tab-bar:top {
+    top: 1px;
+}
+
+QTabWidget::tab-bar:bottom {
+    bottom: 1px;
+}
+
+QTabWidget::tab-bar:left {
+    right: 1px;
+}
+
+QTabWidget::tab-bar:right {
+    left: 1px;
+}
+
+QTabBar::tab {
+    border: 1px solid black;
+}
+
+QTabBar::tab:selected {
+    background: white;
+}
+
+QTabBar::tab:!selected {
+    background: silver;
+}
+
+QTabBar::tab:!selected:hover {
+    background: #999;
+}
+
+QTabBar::tab:top:!selected {
+    margin-top: 3px;
+}
+
+QTabBar::tab:bottom:!selected {
+    margin-bottom: 3px;
+}
+
+QTabBar::tab:top, QTabBar::tab:bottom {
+    min-width: 8ex;
+    margin-right: -1px;
+    padding: 5px 10px 5px 10px;
+}
+
+QTabBar::tab:top:selected {
+    border-bottom-color: none;
+}
+
+QTabBar::tab:bottom:selected {
+    border-top-color: none;
+}
+
+QTabBar::tab:top:last, QTabBar::tab:bottom:last,
+QTabBar::tab:top:only-one, QTabBar::tab:bottom:only-one {
+    margin-right: 0;
+}
+
+QTabBar::tab:left:!selected {
+    margin-right: 3px;
+}
+
+QTabBar::tab:right:!selected {
+    margin-left: 3px;
+}
+
+QTabBar::tab:left, QTabBar::tab:right {
+    min-height: 8ex;
+    margin-bottom: -1px;
+    padding: 10px 5px 10px 5px;
+}
+
+QTabBar::tab:left:selected {
+    border-left-color: none;
+}
+
+QTabBar::tab:right:selected {
+    border-right-color: none;
+}
+
+QTabBar::tab:left:last, QTabBar::tab:right:last,
+QTabBar::tab:left:only-one, QTabBar::tab:right:only-one {
+    margin-bottom: 0;
+}
+QTabWidget::pane {
+  border: 1px solid lightgray;
+  top:-1px; 
+  background:#34C184; 
+} 
+</string>
+      </property>
       <property name="currentIndex">
-       <number>3</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tab_7">
        <attribute name="title">
@@ -714,8 +1005,8 @@
        <widget class="QPushButton" name="ajout_maisondeproduction">
         <property name="geometry">
          <rect>
-          <x>440</x>
-          <y>80</y>
+          <x>370</x>
+          <y>60</y>
           <width>121</width>
           <height>31</height>
          </rect>
@@ -859,8 +1150,8 @@
        <widget class="QPushButton" name="Mod_maisondeproduction">
         <property name="geometry">
          <rect>
-          <x>450</x>
-          <y>90</y>
+          <x>380</x>
+          <y>70</y>
           <width>121</width>
           <height>31</height>
          </rect>
@@ -890,9 +1181,9 @@
        <widget class="QPushButton" name="deletemdp">
         <property name="geometry">
          <rect>
-          <x>170</x>
-          <y>150</y>
-          <width>75</width>
+          <x>260</x>
+          <y>140</y>
+          <width>84</width>
           <height>23</height>
          </rect>
         </property>
@@ -933,7 +1224,7 @@
          <rect>
           <x>300</x>
           <y>90</y>
-          <width>75</width>
+          <width>84</width>
           <height>23</height>
          </rect>
         </property>
@@ -975,7 +1266,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>870</width>
      <height>21</height>
     </rect>
    </property>
