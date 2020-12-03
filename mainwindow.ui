@@ -131,7 +131,7 @@ QTabWidget::pane {
 </string>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="Manipulation_Film">
      <attribute name="title">
@@ -245,7 +245,7 @@ QTabWidget::pane {
 </string>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="Ajouterunfilm">
        <attribute name="title">
@@ -707,7 +707,7 @@ QTabWidget::pane {
        <widget class="QLineEdit" name="compteordremax">
         <property name="geometry">
          <rect>
-          <x>290</x>
+          <x>320</x>
           <y>160</y>
           <width>113</width>
           <height>20</height>
@@ -737,6 +737,32 @@ QTabWidget::pane {
          </rect>
         </property>
        </widget>
+       <widget class="QLabel" name="label_26">
+        <property name="geometry">
+         <rect>
+          <x>140</x>
+          <y>160</y>
+          <width>47</width>
+          <height>13</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>min</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_29">
+        <property name="geometry">
+         <rect>
+          <x>290</x>
+          <y>160</y>
+          <width>47</width>
+          <height>13</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>max</string>
+        </property>
+       </widget>
       </widget>
       <widget class="QWidget" name="tab_5">
        <attribute name="title">
@@ -745,18 +771,18 @@ QTabWidget::pane {
        <widget class="QTableView" name="filmtable_2">
         <property name="geometry">
          <rect>
-          <x>280</x>
+          <x>210</x>
           <y>20</y>
-          <width>471</width>
-          <height>401</height>
+          <width>581</width>
+          <height>381</height>
          </rect>
         </property>
        </widget>
        <widget class="QPushButton" name="Trier">
         <property name="geometry">
          <rect>
-          <x>40</x>
-          <y>190</y>
+          <x>20</x>
+          <y>250</y>
           <width>84</width>
           <height>23</height>
          </rect>
@@ -804,6 +830,19 @@ QTabWidget::pane {
          <string>Selon Durée Croissant</string>
         </property>
        </widget>
+       <widget class="QRadioButton" name="radioButton_4">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>180</y>
+          <width>181</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Selon  le Genre ordre Croissant</string>
+        </property>
+       </widget>
       </widget>
       <widget class="QWidget" name="tab_6">
        <attribute name="title">
@@ -819,23 +858,10 @@ QTabWidget::pane {
          </rect>
         </property>
        </widget>
-       <widget class="QLabel" name="label_26">
-        <property name="geometry">
-         <rect>
-          <x>80</x>
-          <y>70</y>
-          <width>71</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Donner l'ID :</string>
-        </property>
-       </widget>
        <widget class="QLineEdit" name="ID1">
         <property name="geometry">
          <rect>
-          <x>180</x>
+          <x>330</x>
           <y>70</y>
           <width>113</width>
           <height>20</height>
@@ -845,7 +871,7 @@ QTabWidget::pane {
        <widget class="QPushButton" name="afficher1">
         <property name="geometry">
          <rect>
-          <x>330</x>
+          <x>450</x>
           <y>70</y>
           <width>84</width>
           <height>23</height>
@@ -853,6 +879,58 @@ QTabWidget::pane {
         </property>
         <property name="text">
          <string>Afficher</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_28">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>70</y>
+          <width>81</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="rechercherparid">
+        <property name="geometry">
+         <rect>
+          <x>140</x>
+          <y>40</y>
+          <width>82</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Donner l'ID </string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="recherceparnom">
+        <property name="geometry">
+         <rect>
+          <x>140</x>
+          <y>70</y>
+          <width>101</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Donner un nom </string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="rechercheparns">
+        <property name="geometry">
+         <rect>
+          <x>140</x>
+          <y>100</y>
+          <width>161</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Donner le numero de salle </string>
         </property>
        </widget>
       </widget>
@@ -970,7 +1048,7 @@ QTabWidget::pane {
 </string>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>4</number>
       </property>
       <widget class="QWidget" name="tab_7">
        <attribute name="title">

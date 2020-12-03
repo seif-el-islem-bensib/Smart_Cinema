@@ -14,10 +14,15 @@ public:
     QSqlQueryModel * afficher();
     bool update(QString , QString, QString, QString , int , int );
     int compter(QString , int , int , QString );
-    QSqlQueryModel * afficher1(QString);
+
     QSqlQueryModel * affichercr();
     QSqlQueryModel * afficherdc();
     QSqlQueryModel * afficherdu();
+    QSqlQueryModel * afficherGE();
+    QSqlQueryModel * afficher1(QString);
+    QSqlQueryModel * afficher2(QString);
+    QSqlQueryModel * afficher3(int );
+
 
 
 

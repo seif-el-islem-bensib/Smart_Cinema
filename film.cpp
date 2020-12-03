@@ -156,24 +156,7 @@ int Film::compter(QString genre, int dureemin, int durremax, QString mdp) {
     }
     return 0;
 }
-QSqlQueryModel *  Film::afficher1(QString id)
-{
-    QSqlQuery query;
-    query.prepare("select * from Film WHERE IDFILM=:id");
-    query.bindValue(":id", id);
-    query.exec();
-    QSqlQueryModel * model= new QSqlQueryModel();
-    model->setQuery(query);
 
- model->setHeaderData(0, Qt::Horizontal, QObject::tr("ID Film"));
- model->setHeaderData(1, Qt::Horizontal, QObject::tr("Nom "));
- model->setHeaderData(3, Qt::Horizontal, QObject::tr("Genre"));
- model->setHeaderData(4, Qt::Horizontal, QObject::tr("duree"));
- model->setHeaderData(5, Qt::Horizontal, QObject::tr("numsalle"));
-
-     return model;
-
-}
 QSqlQueryModel * Film::affichercr()
 {
     QSqlQuery query;
@@ -227,5 +210,78 @@ QSqlQueryModel * Film::afficherdu()
 
 
 return model;
+}
+QSqlQueryModel * Film::afficherGE()
+{
+    QSqlQuery query;
+    query.prepare("SELECT * FROM Film ORDER BY GENRE DESC;");
+
+    query.exec();
+    QSqlQueryModel * model= new QSqlQueryModel();
+    model->setQuery(query);
+
+ model->setHeaderData(0, Qt::Horizontal, QObject::tr("ID Film"));
+ model->setHeaderData(1, Qt::Horizontal, QObject::tr("Nom "));
+ model->setHeaderData(3, Qt::Horizontal, QObject::tr("Genre"));
+ model->setHeaderData(4, Qt::Horizontal, QObject::tr("duree"));
+ model->setHeaderData(5, Qt::Horizontal, QObject::tr("numsalle"));
+
+
+return model;
+}
+QSqlQueryModel *  Film::afficher1(QString id)
+{
+    QSqlQuery query;
+    query.prepare("select * from Film WHERE IDFILM=:id");
+    query.bindValue(":id", id);
+    query.exec();
+    QSqlQueryModel * model= new QSqlQueryModel();
+    model->setQuery(query);
+
+ model->setHeaderData(0, Qt::Horizontal, QObject::tr("ID Film"));
+ model->setHeaderData(1, Qt::Horizontal, QObject::tr("Nom "));
+ model->setHeaderData(3, Qt::Horizontal, QObject::tr("Genre"));
+ model->setHeaderData(4, Qt::Horizontal, QObject::tr("duree"));
+ model->setHeaderData(5, Qt::Horizontal, QObject::tr("numsalle"));
+
+     return model;
+
+}
+QSqlQueryModel *  Film::afficher2(QString id)
+{
+    QSqlQuery query;
+    query.prepare("select * from Film WHERE NOMFILM=:id");
+    query.bindValue(":id", id);
+    query.exec();
+    QSqlQueryModel * model= new QSqlQueryModel();
+    model->setQuery(query);
+
+ model->setHeaderData(0, Qt::Horizontal, QObject::tr("ID Film"));
+ model->setHeaderData(1, Qt::Horizontal, QObject::tr("Nom "));
+ model->setHeaderData(3, Qt::Horizontal, QObject::tr("Genre"));
+ model->setHeaderData(4, Qt::Horizontal, QObject::tr("duree"));
+ model->setHeaderData(5, Qt::Horizontal, QObject::tr("numsalle"));
+
+     return model;
+
+}
+
+QSqlQueryModel *  Film::afficher3(int id)
+{
+    QSqlQuery query;
+    query.prepare("select * from Film WHERE NUMSALLE=:id");
+    query.bindValue(":id", id);
+    query.exec();
+    QSqlQueryModel * model= new QSqlQueryModel();
+    model->setQuery(query);
+
+ model->setHeaderData(0, Qt::Horizontal, QObject::tr("ID Film"));
+ model->setHeaderData(1, Qt::Horizontal, QObject::tr("Nom "));
+ model->setHeaderData(3, Qt::Horizontal, QObject::tr("Genre"));
+ model->setHeaderData(4, Qt::Horizontal, QObject::tr("duree"));
+ model->setHeaderData(5, Qt::Horizontal, QObject::tr("numsalle"));
+
+     return model;
+
 }
 

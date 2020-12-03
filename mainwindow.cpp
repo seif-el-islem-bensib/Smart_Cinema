@@ -70,8 +70,14 @@ void MainWindow::on_jouterfm_clicked()
 {
 
       ui->filmtable->setModel(tmpfilm.afficher());
+      player = new QMediaPlayer(this);
+          player->setMedia(QUrl::fromLocalFile("C:/Users/seifi/OneDrive/Desktop/mp3.mp3"));
+          qDebug() << player->errorString();
+          player->setVolume(100);
+          player->play();
 QMessageBox::information(nullptr, QObject::tr("Ajouter un Film"),
                   QObject::tr("Film ajoutee"), QMessageBox::Ok);
+
 
 }
   else
@@ -93,11 +99,16 @@ void MainWindow::on_ajout_maisondeproduction_clicked()
   Maisondeproduction m(ID_mdp,nom_mdp, direc);
 
   bool test=m.ajouter();
-  if(!direc.toInt()){test=false;};
+
   if(test)
 {
 
       ui->maisontable->setModel(tmpmsn.afficher());
+      player = new QMediaPlayer(this);
+          player->setMedia(QUrl::fromLocalFile("C:/Users/seifi/OneDrive/Desktop/mp3.mp3"));
+          qDebug() << player->errorString();
+          player->setVolume(100);
+          player->play();
 QMessageBox::information(nullptr, QObject::tr("Ajouter une Maison de Production"),
                   QObject::tr("Maison de production ajoute"), QMessageBox::Ok);
 
@@ -121,6 +132,11 @@ void MainWindow::on_modifierfilm_clicked()
 {
 
       ui->filmtable->setModel(tmpfilm.afficher());
+      player = new QMediaPlayer(this);
+          player->setMedia(QUrl::fromLocalFile("C:/Users/seifi/OneDrive/Desktop/mp3.mp3"));
+          qDebug() << player->errorString();
+          player->setVolume(100);
+          player->play();
 QMessageBox::information(nullptr, QObject::tr("Ajouter un Film"),
                   QObject::tr("Film modifier.\n"
                               "Click Cancel to exit."), QMessageBox::Cancel);
@@ -138,7 +154,12 @@ void MainWindow::on_suppfilm_clicked()
     QString id = ui->filmsup->text();
     bool test=tmpfilm.supprimer(id);
     if(test)
-    {ui->filmtable->setModel(tmpfilm.afficher());;//refresh
+       { player = new QMediaPlayer(this);
+            player->setMedia(QUrl::fromLocalFile("C:/Users/seifi/OneDrive/Desktop/mp3.mp3"));
+            qDebug() << player->errorString();
+            player->setVolume(100);
+            player->play();
+   ui->filmtable->setModel(tmpfilm.afficher());;//refresh
         QMessageBox::information(nullptr, QObject::tr("Supprimer effectuer"),
                     QObject::tr("Film supprime.\n"), QMessageBox::Ok);
 
@@ -154,7 +175,12 @@ void MainWindow::on_deletemdp_clicked()
     QString id = ui->delmaison->text();
     bool test=tmpmsn.supprimer(id);
     if(test)
-    {ui->maisontable->setModel(tmpmsn.afficher());;//refresh
+    {player = new QMediaPlayer(this);
+            player->setMedia(QUrl::fromLocalFile("C:/Users/seifi/OneDrive/Desktop/mp3.mp3"));
+            qDebug() << player->errorString();
+            player->setVolume(100);
+            player->play();
+    ui->maisontable->setModel(tmpmsn.afficher());;//refresh
         QMessageBox::information(nullptr, QObject::tr("Supprimer effectuer"),
                     QObject::tr("msn supprime.\n"), QMessageBox::Ok);
 
@@ -173,6 +199,11 @@ void MainWindow::on_Mod_maisondeproduction_clicked()
   bool test=tmpmsn.update(ID_mdp,nom_mdp,nom_dir);
   if(test)
 {
+      player = new QMediaPlayer(this);
+          player->setMedia(QUrl::fromLocalFile("C:/Users/seifi/OneDrive/Desktop/mp3.mp3"));
+          qDebug() << player->errorString();
+          player->setVolume(100);
+          player->play();
 
       ui->maisontable->setModel(tmpmsn.afficher());
 QMessageBox::information(nullptr, QObject::tr("Maison de Production Modifier"),
@@ -199,9 +230,26 @@ void MainWindow::on_pushButton_clicked()
 
 void MainWindow::on_afficher1_clicked()
 {
-   QString ID= ui->ID1->text();
 
-   ui->filmtable_4->setModel(tmpfilm.afficher1(ID));
+
+
+   if(ui->rechercherparid->isChecked())
+      {
+       QString ID= ui->ID1->text();
+       ui->filmtable_4->setModel(tmpfilm.afficher1(ID));
+
+      }
+   else if (ui->recherceparnom->isChecked())
+   {
+       QString ID= ui->ID1->text();
+       ui->filmtable_4->setModel(tmpfilm.afficher2(ID));
+
+   }
+   else if (ui->rechercheparns->isChecked())
+   {
+       int ID= ui->ID1->text().toInt();
+       ui->filmtable_4->setModel(tmpfilm.afficher3(ID));
+   }
 
 }
 
@@ -210,6 +258,7 @@ void MainWindow::on_afficher1_3_clicked()
     QString ID= ui->ID1_3->text();
 
     ui->filmtable_5->setModel(tmpmsn.afficher1(ID));
+
 
 }
 
@@ -227,10 +276,17 @@ void MainWindow::on_Trier_clicked()
         ui->filmtable_2->setModel(tmpfilm.afficherdc());
 
     }
-    else
+    else if (ui->radioButton_3->isChecked())
     {
         ui->filmtable_2->setModel(tmpfilm.afficherdu());
     }
-}
+    else if (ui->radioButton_4->isChecked()){
+
+        ui->filmtable_2->setModel(tmpfilm.afficherGE());
+    };
+
+
+};
+
 
 

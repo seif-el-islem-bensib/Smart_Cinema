@@ -1,5 +1,6 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
+#include <QMediaPlayer>
 #include "string"
 #include <QMainWindow>
 #include "film.h"
@@ -43,9 +44,11 @@ private slots:
 
 
 
+
 private:
     Ui::MainWindow *ui;
     Film tmpfilm;
     Maisondeproduction tmpmsn;
+    QMediaPlayer *player;
 };
 #endif // MAINWINDOW_H
